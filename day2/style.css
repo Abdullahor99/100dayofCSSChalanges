@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: black;
+}
+
+.box {
+  min-width: 278px;
+  min-height: 278px;
+  background-color: rgb(244, 244, 244);
+  position: relative;
+}
+.box::after {
+  content: "Hello World Hello World Hello World Hello World";
+  text-wrap: nowrap;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  text-indent: -24ch;
+  font-weight: bold;
+  animation: breaking-news linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  overflow-x: hidden;
+  animation-fill-mode: both;
+}
+
+@keyframes breaking-news {
+  to {
+    text-indent: 12ch;
+  }
+}/*# sourceMappingURL=style.css.map */
